@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-RegularItalic.eot');
+    src: local('Scandia Regular Italic'), local('Scandia-RegularItalic'),
+        url('Scandia-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-RegularItalic.woff2') format('woff2'),
+        url('Scandia-RegularItalic.woff') format('woff'),
+        url('Scandia-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-Light.eot');
+    src: local('Scandia Light'), local('Scandia-Light'),
+        url('Scandia-Light.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-Light.woff2') format('woff2'),
+        url('Scandia-Light.woff') format('woff'),
+        url('Scandia-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-BoldItalic.eot');
+    src: local('Scandia Bold Italic'), local('Scandia-BoldItalic'),
+        url('Scandia-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-BoldItalic.woff2') format('woff2'),
+        url('Scandia-BoldItalic.woff') format('woff'),
+        url('Scandia-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Scandia Line';
+    src: url('ScandiaLine-Bold.eot');
+    src: local('Scandia Line Bold'), local('ScandiaLine-Bold'),
+        url('ScandiaLine-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ScandiaLine-Bold.woff2') format('woff2'),
+        url('ScandiaLine-Bold.woff') format('woff'),
+        url('ScandiaLine-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia Line';
+    src: url('ScandiaLine-Light.eot');
+    src: local('Scandia Line Light'), local('ScandiaLine-Light'),
+        url('ScandiaLine-Light.eot?#iefix') format('embedded-opentype'),
+        url('ScandiaLine-Light.woff2') format('woff2'),
+        url('ScandiaLine-Light.woff') format('woff'),
+        url('ScandiaLine-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia Stencil';
+    src: url('Scandia-Stencil.eot');
+    src: local('Scandia Stencil'), local('Scandia-Stencil'),
+        url('Scandia-Stencil.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-Stencil.woff2') format('woff2'),
+        url('Scandia-Stencil.woff') format('woff'),
+        url('Scandia-Stencil.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-Medium.eot');
+    src: local('Scandia Medium'), local('Scandia-Medium'),
+        url('Scandia-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-Medium.woff2') format('woff2'),
+        url('Scandia-Medium.woff') format('woff'),
+        url('Scandia-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-LightItalic.eot');
+    src: local('Scandia Light Italic'), local('Scandia-LightItalic'),
+        url('Scandia-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-LightItalic.woff2') format('woff2'),
+        url('Scandia-LightItalic.woff') format('woff'),
+        url('Scandia-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Scandia Line';
+    src: url('ScandiaLine-Medium.eot');
+    src: local('Scandia Line Medium'), local('ScandiaLine-Medium'),
+        url('ScandiaLine-Medium.eot?#iefix') format('embedded-opentype'),
+        url('ScandiaLine-Medium.woff2') format('woff2'),
+        url('ScandiaLine-Medium.woff') format('woff'),
+        url('ScandiaLine-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-MediumItalic.eot');
+    src: local('Scandia Medium Italic'), local('Scandia-MediumItalic'),
+        url('Scandia-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-MediumItalic.woff2') format('woff2'),
+        url('Scandia-MediumItalic.woff') format('woff'),
+        url('Scandia-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Scandia Line Stencil';
+    src: url('ScandiaLine-Stencil.eot');
+    src: local('Scandia Line Stencil'), local('ScandiaLine-Stencil'),
+        url('ScandiaLine-Stencil.eot?#iefix') format('embedded-opentype'),
+        url('ScandiaLine-Stencil.woff2') format('woff2'),
+        url('ScandiaLine-Stencil.woff') format('woff'),
+        url('ScandiaLine-Stencil.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia Line';
+    src: url('ScandiaLine-Regular.eot');
+    src: local('Scandia Line Regular'), local('ScandiaLine-Regular'),
+        url('ScandiaLine-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ScandiaLine-Regular.woff2') format('woff2'),
+        url('ScandiaLine-Regular.woff') format('woff'),
+        url('ScandiaLine-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-Bold.eot');
+    src: local('Scandia Bold'), local('Scandia-Bold'),
+        url('Scandia-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-Bold.woff2') format('woff2'),
+        url('Scandia-Bold.woff') format('woff'),
+        url('Scandia-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scandia';
+    src: url('Scandia-Regular.eot');
+    src: local('Scandia Regular'), local('Scandia-Regular'),
+        url('Scandia-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Scandia-Regular.woff2') format('woff2'),
+        url('Scandia-Regular.woff') format('woff'),
+        url('Scandia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

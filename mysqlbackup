@@ -1,0 +1,2 @@
+cd “C:\Program Files\MySQL\MySQL Server 5.6\bin”
+mysqldump -h 127.0.0.1 -u root -p --all-databases > "D:\databases_backup\allmysql.sql"

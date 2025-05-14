@@ -1,345 +1,438 @@
-------------------------------------
-# Date: 06 May 2025
+Zync Backend - Docs        
 
-## Summary
-- Delete room function improved in admin panel.
-- Bug fixes and improvements
+documentation for
 
-#### Updated Files 
-- [PostController.php](app/Http/Controllers/PostController.php)
-- [RoomController.php](app/Http/Controllers/RoomController.php)
-- [SettingsController.php](app/Http/Controllers/SettingsController.php)
-- [UserController.php](app/Http/Controllers/UserController.php)
+* * *
 
-- [style.css](public/asset/css/style.css)
+Main
 
-- [env.js](public/asset/script/env.js)
-- [setting.js](public/asset/script/setting.js)
+*   [Introduction](#introduction)
+*   [Setup database](#setup_database)
+*   [Setup backend](#setup_backend)
+*   [Cron jobs](#cronjobs)
+*   [Setup Agora](#setup_agora)
+*   [Setup Notification (FCM)](#setup_fcm)
+*   [Setup Firebase Config](#setup_firebase_config)
+*   [Sightengine](#sightengine)
+*   [Storage setting](#storage_setting_aws_do)
+*   [Host your backend](#host_your_backend)
+*   [Getting the credential](#getting_the_credential)
+*   [Update info](#update_info)
 
-- [en.json](resources/lang/en.json)
+Zync
+====
 
-- [setting.blade.php](resources/views/setting.blade.php)
-- [app.blade.php](resources/views/include/app.blade.php)
+The Ultimate Flutter Social Media
 
-#### Added Files
-- [firebase-init.js](public/asset/script/firebase-init.js)
+*   [Backend](https://docs.retrytech.com/Zync/Zync_backend)
+*   [Flutter](https://docs.retrytech.com/Zync/Zync_flutter)
 
-#### Deleted Files
-None
+Zync
+----
 
-#### Database
-- settings : Fields Added : is_in_app_purchase_enabled, duration_limit_in_reel
- 
-------------------------------------
-# Date: 28 March 2025
+##### The Ultimate Flutter Social Media
 
-## Summary
+Zync app is an ultimate social media script built with flutter and Laravel as backend. It offers many advanced features and functions like Feed (Images, Videos, Text), Stories, Chat, Chat Rooms, Manage Chat Rooms & Members, Random Profiles, Interests, Push Notifications And Lot more... This package contains fully functional Zync flutter app, Backend, Database file & documentation. Using this script, any individual or company can save 100s of hours and publish twitter like social media app within couple of hours.
 
-- Add Reel Section
-- Search With Interests (Posts, Reels, Users)
-- Interest attach with posts and reels
-- Code Optimized
-- Bug Fixed
+##### Version Details
 
-#### Updated Files
+dart: ">=3.7.0 < 4.0.0 "  
+flutter: ">=3.27.0"  
+laravel/framework: "^9.0"
 
-- [text](app/Http/Controllers/PostController.php)
-- [text](app/Http/Controllers/RoomController.php)
-- [text](app/Http/Controllers/SettingsController.php)
-- [text](app/Http/Controllers/UserController.php)
+##### Developer Friendly
 
-- [text](app/Models/Constants.php)
-- [text](app/Models/Like.php)
-- [text](app/Models/Post.php)
-- [text](app/Models/Report.php)
-- [text](app/Models/SavedNotification.php)
-- [text](app/Models/User.php)
+Specially built for developers to give them freedom while coding.
 
-- [text](public/asset/css/style.css)
+##### Clean Code
 
-- [text](public/asset/script/app.js)
-- [text](public/asset/script/env.js)
-- [text](public/asset/script/index.js)
-- [text](public/asset/script/report.js)
-- [text](public/asset/script/setting.js)
-- [text](public/asset/script/user.js)
+Less bulky and clean code with Getx flutter state management.
 
-- [text](resources/lang/en.json)
+##### Laravel/Flutter
 
-- [text](resources/views/include/app.blade.php)
-- [text](resources/views/index.blade.php)
-- [text](resources/views/reports.blade.php)
-- [text](resources/views/setting.blade.php)
-- [text](resources/views/userDetails.blade.php)
+A great combination of techstacks, trending now in market.
 
-- [text](routes/api.php)
-- [text](routes/web.php)
+##### Well Documented
 
-#### Added Files
+Comes with nice documentation to help you get started fast and ASAP.
 
-- [text](app/Http/Controllers/ReelController.php)
+##### Continuous Updates
 
-- [text](app/Models/Music.php)
-- [text](app/Models/MusicCategory.php)
-- [text](app/Models/Reel.php)
-- [text](app/Models/ReelComment.php)
+Comes with continuous updates to keep you safe from exploitable holes
 
-- [text](public/asset/script/music.js)
-- [text](public/asset/script/reel.js)
+##### Realtime Chat
 
-- [text](resources/views/musics.blade.php)
-- [text](resources/views/viewReels.blade.php)
+Realtime chats between users regarding properties powered by Firestore.
 
-#### Deleted Files
-None
+##### Multiple Languages
 
-#### Database
-- reels : New table added
-- reel_comments : New table added
-- musics : New table added
-- music_categories : New table added
+The App Comes with multiple languages (More than 20). RTL supported.
 
-- posts : Fields Remove : content_type 
+##### Powerful Admin Panel
 
-- posts : Fields Added : interest_ids 
-- saved_notifications : Fields Added : reel_id, reel_comment_id
-- likes : Fields Added : reel_id | post_id -> null (Change Default value) |
-- users : Fields Added : saved_music_ids, saved_reel_ids
-- reports : Fields Added : reel_id 
+Admin dashboard to manage the data of the app and control them.
 
-------------------------------------
-# Date: 03 December 2024
+##### Attractive UI/UX
 
-## Summary
-- Bug Fixes and improvement in Backend
+Amazing UI/UX designed and developed by world class designers.
 
-#### Updated Files
-- [GlobalFunction.php](app/Models/GlobalFunction.php)
+##### Active Support
 
-#### Added Files
-None
+Our support and developer team helps you solve any issues during installation.
 
-#### Deleted Files
-None
+Prerequisites
+=============
 
-#### Database
-None
+*   VPS with cPanel is recommended
+    
+*   PHP 8.0
+    
+*   Hosting with cPanel (Strictly Recommended)
+    
+*   memory\_limit should be 500M
+    
+*   upload\_max\_filesize : 500M
+    
+*   post\_max\_size : 500M
+    
+*   max\_input\_time : 60
+    
+*   Firebase Blaze Plan
+    
+*   sightengine Account credential for Content Moderation : [https://sightengine.com/](https://sightengine.com/)
+    
 
-------------------------------------
-# Date: 28 October 2024
+Extracting the project and settings up database
+===============================================
 
-## Summary
+*   Extract the folder you have downloaded from codecanyon and open the folder
+    
+*   Open it and find the Zync\_database.sql file
+    
+*   Then open your cPanel provided by your web hosting provider.
+    
+*   Click the MySQLDatabase option under DATABASES section and create database for your app as shown in the images below.
+    
 
-- Bug Fixes and improvement
-- Comment will be shown in admin panel
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_1.png)
 
-#### Updated Files
+*   Add database name and click on create database.
+    
 
-<!-- First replace the composer.json file -->
-<!-- Now open your terminal and paste the command line "Composer update" and then make all below changes  -->
-- [composer.json](composer.json)
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_2.png)
 
-- [PostController.php](app/Http/Controllers/PostController.php)
-- [RoomController.php](app/Http/Controllers/RoomController.php)
-- [SettingsController.php](app/Http/Controllers/SettingsController.php)
-- [UserController.php](app/Http/Controllers/UserController.php)
+*   Now we will create a user to access the database
+    
+*   Like as shown in the image, enter username and password (save it to use later)
+    
+*   Click on create user and user will be created
+    
 
-- [GlobalFunction.php](app/Models/GlobalFunction.php)
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_3.png)
 
-- [app.js](public/asset/script/app.js)
-- [env.js](public/asset/script/env.js)
-- [notification.js](public/asset/script/notification.js)
-- [report.js](public/asset/script/report.js)
-- [user.js](public/asset/script/user.js)
+*   Now we have to add that created user to database. so scroll down and you can see like image below
+    
+*   Select the user from the list and select the database, and click on add button below
+    
 
-- [en.json](resources/lang/en.json)
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_4.png)
 
-- [app.blade.php](resources/views/include/app.blade.php)
+*   After clicking on add button you will see like below.
+    
+*   There you can see **ALL PRIVILEGES** option, check the box before that
+    
+*   This will tick all the boxes shown below (Check the image below). Click on make changes and you are done.
+    
 
-- [admob.blade.php](resources/views/admob.blade.php)
-- [faqs.blade.php](resources/views/faqs.blade.php)
-- [interest.blade.php](resources/views/interest.blade.php)
-- [login.blade.php](resources/views/login.blade.php)
-- [notification.blade.php](resources/views/notification.blade.php)
-- [reports.blade.php](resources/views/reports.blade.php)
-- [restrictions.blade.php](resources/views/restrictions.blade.php)
-- [setting.blade.php](resources/views/setting.blade.php)
-- [userDetails.blade.php](resources/views/userDetails.blade.php)
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_5.png)
 
-- [web.php](routes/web.php)
+*   Now we have to import the database file. Search for **phpMyAdmin** and click on it.
+    
 
-#### Added Files
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_8.png)
 
+*   Then system will redirect you to the phpMyAdmin where you will be able to find the database we just created
+    
+*   Click on that database
+    
+*   Then find the import button on the Top bar and click on it
+    
 
-#### Deleted Files
-None
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_6.png)
 
-#### Database
-- saved_notifications : fields added : comment_id 
- 
+*   It will open the page like below
+    
+*   Click on **Choose File** button and load the database.sql file which will be there in the folder you have extracted.
+    
 
---------------------------------------------------
-------------------------------------
-# Date: 18 August 2024
+![db_1](https://docs.retrytech.com/asset/img/doctor/db_7.png)
 
-## Summary
-- Add Storage (AWS , Digital Ocean)
-- Audio Post
-- Username Restriction
-- Dummy Data : Add Fake Data (Admin Panel)
-- Add Moderator 
-- SightEngine
+*   Click on go button at the bottom of the page.
+    
+*   Now database is ready to use.
+    
 
-#### Updated Files
-.env
+Setting Up Database credentials to the project
+==============================================
 
-- [InterestController.php](app/Http/Controllers/InterestController.php) 
-- [PostController.php](app/Http/Controllers/PostController.php) 
-- [ProfileVerificationController.php](app/Http/Controllers/ProfileVerificationController.php) 
-- [RoomController.php](app/Http/Controllers/RoomController.php) 
-- [SettingsController.php](app/Http/Controllers/SettingsController.php) 
-- [UserController.php](app/Http/Controllers/UserController.php)
+*   Now come back to the project folder and then extract **Zync\_backend.zip** file
+    
+*   In that folder, find the **.env** file, open it with any text editor and make the changes as below
+    
+*   There in the **APP\_URL** Replace the **https://yourdomain.com/** to Your Domain
+    
+*   Change Database Configuration, as shown in the example below
+    
 
-- [Comment.php](app/Models/Comment.php) 
-- [Constants.php](app/Models/Constants.php) 
-- [GlobalFunction.php](app/Models/GlobalFunction.php)
+![db_1](https://docs.retrytech.com/asset/img/doctor/backend_1.png)
 
-- [filesystems.php](config/filesystems.php)
+**DB\_DATABASE** \= database\_name
 
-- [style.css](public/asset/css/style.css)
+**DB\_USERNAME** \= database\_username
 
-- [admob.js](public/asset/script/admob.js) 
-- [app.js](public/asset/script/app.js) 
-- [env.js](public/asset/script/env.js) 
-- [index.js](public/asset/script/index.js) 
-- [setting.js](public/asset/script/setting.js) 
-- [user.js](public/asset/script/user.js)
+**DB\_PASSWORD** \= database\_password
 
-- [en.json](resources/lang/en.json)
+*   And save the file by pressing **Ctrl + s**
+    
 
-- [app.blade.php](resources/views/include/app.blade.php)
+Cron Jobs
+=========
 
-- [admob.blade.php](resources/views/admob.blade.php) 
-- [roomDetails.blade.php](resources/views/roomDetails.blade.php) 
-- [rooms.blade.php](resources/views/rooms.blade.php) 
-- [setting.blade.php](resources/views/setting.blade.php) 
-- [userDetails.blade.php](resources/views/userDetails.blade.php) 
-- [users.blade.php](resources/views/users.blade.php) 
-- [viewPosts.blade.php](resources/views/viewPosts.blade.php) 
-- [viewStories.blade.php](resources/views/viewStories.blade.php)
+*   Search the Cron jobs in your cPanel Tools search.
+    
 
-- [api.php](routes\api.php)
-- [web.php](routes\web.php)
+![cronjobs_1](https://docs.retrytech.com/asset/img/cronjobs_1.png)
 
+![cronjobs_2](https://docs.retrytech.com/asset/img/cronjobs_2.png)
 
-#### Added Files
-- [RestrictionController.php](app/Http/Controllers/RestrictionController.php)
+*   Now Add your **curl --request GET 'https://yourdomain.com/deleteStoryFromWeb'** in Command field like as above image.
+    
+*   And then Click on **"Add New Cron Job"** Button.
+    
 
-- [LikeComment.php](app/Models/LikeComment.php) 
-- [UsernameRestriction.php](app/Models/UsernameRestriction.php)
+![cronjobs_2](https://docs.retrytech.com/asset/img/cronjobs_3.png)
 
-- [restrictions.js](public/asset/script/restrictions.js)
+*   Your Cron Job is ready to work.
+    
 
-- [restrictions.blade.php](resources/views/restrictions.blade.php)
+Setting up agora
+================
 
+*   Follow [This guide](https://docs.retrytech.com/agora_project_setup) and setup project at agora and collect **App id** and **App Certificate**
+    
+*   Add that **App id** and **App Certificate** to the **.env** file as show below.
+    
 
-#### Deleted Files
-None
+![db_1](https://docs.retrytech.com/asset/img/doctor/agora_6.png)
 
-#### Database
+*   Save the file by pressing **Ctrl + s**
+    
 
-- like_comments : Table Added
-- username_restrictions : Table added 
+Setup Notification (FCM)
+========================
 
-- comments : fields added : desc (varchar to Text), 
-- posts : fields added : link_preview_json, is_restricted, content_type
-- post_contents : fields added : audio_waves
-- stories : fields added : thumbnail
-- settings : fields added : minute_limit_in_audio_post, is_sight_engine_enabled, sight_engine_api_user, sight_engine_api_secret, 
-                            sight_engine_image_workflow_id, sight_engine_video_workflow_id, storage_type, fetch_post_type, support_email
-- users : fields added : is_moderator
+*   Follow [This guide](https://docs.retrytech.com/firebase_fcm_setup_latest) and setup project at firebase and collect private key **.json**
+    
+*   Open private key **.json** file in your text editor.
+    
+*   Copy content of private key **.json** file from your text editor.
+    
+*   Find the **googleCredentials.json** file in your backend folder and paste the content in that file.
+    
 
---------------------------------------------------
+Setup Firebase Config
+=====================
 
-## Date: 03/07/2024 ##
+*   Now go back to the **Project Overview** page in Firebase and follow the steps below carefully.
+    
 
---> Updated Files <--
-.env
-app\Http\Controllers\RoomController.php (acceptInvitation Notification Changes)
+![firebase_config_1](https://docs.retrytech.com/asset/img/firebase_config_1.png)
 
-app\Http\Controllers\PostController.php
-app\Http\Controllers\ProfileVerificationController.php
-app\Http\Controllers\RoomController.php
-app\Http\Controllers\SettingsController.php
-app\Http\Controllers\UserController.php
+*   Click on **\+ Add app**
+    
 
+![firebase_config_2](https://docs.retrytech.com/asset/img/firebase_config_2.png)
 
-public\asset\css\style.css
+*   Click on **Web**
+    
 
-public\asset\script\setting.js
+![firebase_config_3](https://docs.retrytech.com/asset/img/firebase_config_3.png)
 
-resources\lang\en.json
+*   Enter your app name
+    
+*   Click on **Register app**
+    
 
-resources\views\setting.blade.php
-resources\views\userDetails.blade.php
+![firebase_config_4](https://docs.retrytech.com/asset/img/firebase_config_4.png)
 
-routes\api.php
-routes\web.php
+*   After clicking on **Register App** , you will see the **Add Firebase SDK** option.
+    
+*   Now, you need to copy only the **firebaseConfig part** , which is highlighted in red.
+    
+*   Please handle the copied part carefully.
+    
+*   Now, open your backend project and locate the file **firebase-init.js** .
+    
+*   which is placed at: **public\\asset\\script\\firebase-init.js**
+    
+*   Replace only the copied **firebaseConfig** part in that file with the new one.
+    
+*   For more details, please refer to the image shown below.
+    
 
---> Database <--
+![firebase_config_5](https://docs.retrytech.com/asset/img/firebase_config_5.png)
 
-- settings : fields added : audio_space_hosts_limit, audio_space_listeners_limit, audio_space_duration_in_minutes
+*   And **CTRL + S** save the file.
+    
 
+sightengine (Optional)
+======================
 
-## Date: 26/04/2024 ##
+*   Sign up at [sightengine](https://sightengine.com/)
+    
+*   See Below image for getting API Keys **(API User & API secret)**
+    
 
---> Updated Files <--
-.env
-app\Http\Controllers\AdminController.php
-app\Http\Controllers\PostController.php
-app\Http\Controllers\ProfileVerificationController.php
-app\Http\Controllers\RoomController.php
-app\Http\Controllers\SettingsController.php
-app\Http\Controllers\UserController.php
+![sightengine_1](https://docs.retrytech.com/asset/img/sightengine_1.png)
 
-app\Models\Constants.php
-app\Models\GlobalFunction.php
+* * *
 
-public\asset\css\style.css
-public\asset\image\verified.svg
+*   ##### **Image**
+    
 
-public\asset\script\env.js
-public\asset\script\notification.js
-public\asset\script\setting.js
-public\asset\script\user.js
+![sightengine_2](https://docs.retrytech.com/asset/img/sightengine_2.png)
 
-resources\lang\en.json
+![sightengine_3](https://docs.retrytech.com/asset/img/sightengine_3.png)
 
-resources\views\index.blade.php
-resources\views\setting.blade.php
-resources\views\users.blade.php
-resources\views\include\app.blade.php
+![sightengine_4](https://docs.retrytech.com/asset/img/sightengine_4.png)
 
-routes\api.php
-routes\web.php
+*   You will be able to select the rules that should be applied, and what actions should be taken based on those rules: **ACCEPT** or **REJECT.**
+    
 
+![sightengine_5](https://docs.retrytech.com/asset/img/sightengine_5.png)
 
---> Added Files <--
-public\asset\script\admob.js
-app\Models\Users.php
+*   When you click on **SAVE WORKFLOW** , Then you will get your **Workflow id** for **image**
+    
 
-public\asset\script\verificationRequests.js
+![sightengine_6](https://docs.retrytech.com/asset/img/sightengine_6.png)
 
-resources\views\admob.blade.php
-resources\views\verificationRequests.blade.php
+* * *
 
+*   ##### **Video**
+    
 
---> Remove Files <--
-public\asset\script\profileVerification.js
-resources\views\profileVerification.blade.php
+![sightengine_2](https://docs.retrytech.com/asset/img/sightengine_7.png)
 
+![sightengine_3](https://docs.retrytech.com/asset/img/sightengine_8.png)
 
---> Database <--
-- room_users : fields added : is_mute
-- settings : fields added : minute_limit_in_creating_story, minute_limit_in_choosing_video_for_story, minute_limit_in_choosing_video_for_post,              
-max_images_can_be_uploaded_in_one_post, ad_banner_android, ad_interstitial_android, ad_banner_iOS, ad_interstitial_iOS, is_admob_on
+![sightengine_9](https://docs.retrytech.com/asset/img/sightengine_9.png)
+
+*   You will be able to select the rules that should be applied, and what actions should be taken based on those rules: **ACCEPT** or **REJECT.**
+    
+
+*   When you click on **SAVE WORKFLOW** , Then you will get your **Workflow id** for video, Like below image
+    
+
+![sightengine_10](https://docs.retrytech.com/asset/img/sightengine_10.png)
+
+* * *
+
+*   Copy all 4 things, **API Key, API Secret, Image Workflow id, Video Workflow id**
+    
+*   Now Go to **Admin panel** and open **setting page.**
+    
+*   Now you will find sightengine section in setting page.
+    
+*   Keep **switch on** and **paste** them all like below image and save them
+    
+
+![sightengine_11](https://docs.retrytech.com/asset/img/sightengine_11.png)
+
+*   Sightengine is now working in your app.
+    
+
+Storage setting (Optional)
+==========================
+
+*   ##### **AWS S3**
+    
+
+*   Follow [This guide](https://docs.retrytech.com/s3_bucket) and create AWS S3 Bucket and get API Keys and other credentials.
+    
+*   Once you collected all credentials, open .env file and paste those credentials. you will find something like below.
+    
+
+![](https://docs.retrytech.com/asset/img/aws_configuration.png)
+
+* * *
+
+*   ##### **DigitalOcean**
+    
+
+*   Follow [This guide](https://docs.retrytech.com/digital_ocean_space) and create Digital Ocean Space Bucket and get API Keys and other credentials.
+    
+*   Once you collected all credentials, open .env file and paste those credentials. you will find something like below.
+    
+
+![](https://docs.retrytech.com/asset/img/digital_ocean_configuration.png)
+
+* * *
+
+![storage_setting](https://docs.retrytech.com/asset/img/storage_setting.png)
+
+*   Once you have set the credentials for required storage providers, You can set the required one here on the settings page. Only one at a time works. (So yes, You have to set the credentials only for that which you want to use.)
+    
+*   Local storage doesn't require any credentials.
+    
+*   Storage will work fine only if you have set the credentials correctly and made required configurations on their dashboards.
+    
+
+host your backend
+=================
+
+*   Create a zip of the **Zync\_backend** folder
+    
+*   Upload that folder to your domain-targeted directory on your cPanel provided by your hosting provider. and extract the zip file.
+    
+*   Make sure that your targeted directory has the project files directly, and not wrapped in a folder
+    
+*   Cheers! Now try accessing your domain, the admin panel should be live there on your domain
+    
+
+Getting the credential
+======================
+
+Now web setup is completed and let's collect some credentials for the app setup
+
+*   **Admin Panel URL :** http://yourdomain.com/
+    
+*   **Admin Panel User Name :** admin
+    
+*   **Admin Panel Password :** admin123
+    
+*   **Baseurl :** http://yourdomain.com/api/
+    
+*   **apiKey :** 123
+    
+
+Now save these credentials somewhere and start following the documentation to setup application.
+
+Update info
+===========
+
+*   To upgrade your project, you have to **Add/Update/Remove files** and **fields in database** . Please check below file for the information.
+    
+*   File name : **README.md**
+    
+*   Please be careful while making an updates this way, It might result in errors sometimes.
+    
+*   If it comes any issues while making an update, you are absolutely responsible for that since updating existing project is not included in the support.
+    
+
+Want to talk with us?
+---------------------
+
+*   Telegram (Support Desk) : [+91 7070799200](https://t.me/+917070799200)
+*   Email : [sudhirkdnw@gmail.com](mailto:sudhirkdnw@gmail.com)
+*   Whatsapp (No Support Here) : [+91 7070799200](https://wa.me/7070799200)
+
